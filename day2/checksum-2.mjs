@@ -1,8 +1,8 @@
 import fs from 'fs'
 import R from 'ramda'
 
-import compose from './compose'
-import promisify from './promisify'
+import compose from '../utils/compose'
+import promisify from '../utils/promisify'
 
 const toInt = R.compose(
   parseInt,
