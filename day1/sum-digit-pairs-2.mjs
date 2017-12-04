@@ -1,6 +1,6 @@
 import R from 'ramda'
 
-export function sumDigitPairs(digits) {
+export default function sumDigitPairs(digits) {
   const digitsLength = R.length(digits)
 
   return R.compose(

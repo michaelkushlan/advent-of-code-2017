@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@std/esm@0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.18.0.tgz#e212b565c765f93b29ec522a493a192ce7ae2ba6"
+
 ramda@0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
