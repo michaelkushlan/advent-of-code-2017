@@ -15,7 +15,7 @@ export default function distance(number) {
   const distanceFromCornerToNumber = diff % distanceFromCornerToCenter
 
   return distanceFromCornerToNumber >= distanceFromAxesToCenter
-    ? distanceFromAxesToCenter + distanceFromCornerToNumber - distanceFromAxesToCenter
+    ? distanceFromCornerToNumber
     : distanceFromCornerToCenter - distanceFromCornerToNumber
 }
 
