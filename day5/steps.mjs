@@ -18,7 +18,7 @@ export default async function solution(fileName) {
 
   let steps = 0
 
-  while(currentIndex < intArray.length) {
+  while(currentIndex < intArray.length && currentIndex >= 0) {
     const oldIndex = currentIndex
 
     currentIndex = currentIndex + intArray[currentIndex]
