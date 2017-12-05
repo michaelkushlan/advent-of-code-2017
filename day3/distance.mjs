@@ -7,19 +7,18 @@ export default function distance(number) {
     Math.sqrt,
   )(number)
 
-  let goingDown = true
-  let distance = nearestOddSquareRt - 1
+  const diff = Math.pow(nearestOddSquareRt, 2) - number
 
-  let nearestOddSquare = Math.pow(nearestOddSquareRt, 2)
-  
-  while(nearestOddSquare > number) {
-    nearestOddSquare -= Math.floor(nearestOddSquareRt / 2)
-    goingDown = !goingDown
-  }
+  const distanceFromCornerToCenter = nearestOddSquareRt - 1
+  const distanceFromAxesToCenter = distanceFromCornerToCenter / 2
 
-  const diff = number - nearestOddSquare
+  const distanceFromCornerToNumber = diff % distanceFromCornerToCenter
 
-  if(goingDown)
-    return nearestOddSquareRt - 1 - diff
-  return nearestOddSquareRt - 1 - Math.floor(nearestOddSquareRt / 2) + diff
+  return distanceFromCornerToNumber >= distanceFromAxesToCenter
+    ? distanceFromAxesToCenter + distanceFromCornerToNumber - distanceFromAxesToCenter
+    : distanceFromCornerToCenter - distanceFromCornerToNumber
 }
+
+(() => {
+  console.log(distance(277678))
+})()
