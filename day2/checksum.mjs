@@ -33,10 +33,11 @@ const maxDiff = R.compose(
 )
 const readFile = promisify(fs.readFile)
 
+const sumLines = R.reduce((acc, line) => acc + maxDiff(line), 0)
 
 export default async function checkSum(fileName) {
   return compose(
-    R.reduce((acc, line) => acc + maxDiff(line), 0),
+    sumLines,
     R.split('\n'),
     R.toString,
     readFile
