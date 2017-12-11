@@ -1,0 +1,33 @@
+Arguments: 
+  /Users/michaelkushlan/.nvm/versions/node/v9.2.0/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js add ramda
+
+PATH: 
+  /Users/michaelkushlan/.yarn/bin:/Users/michaelkushlan/.nvm/versions/node/v9.2.0/bin:/Users/michaelkushlan/Library/Python/2.7/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michaelkushlan/Projects/snugville/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  9.2.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "day11",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND repository.vnerd.com repository.vnerd.com:443
+      at errnoException (dns.js:55:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
