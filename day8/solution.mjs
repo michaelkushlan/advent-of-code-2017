@@ -31,7 +31,7 @@ export default async function solution(fileName) {
   for(const line of dataArray) {
     const things = line.split(' ')
     const [key, change, amount, asdf, key2, condition, conditionValue] = things
-    
+
     switch(condition) {
       case '>':
         if(hash[key2] > parseInt(conditionValue)) {
