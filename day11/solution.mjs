@@ -43,12 +43,15 @@ export default async function solution(fileName) {
         break
     }
 
-    let distance = Math.abs(y) + (Math.abs(x) / 2)
+    let xydistance = Math.abs(x) + Math.abs(y)
+    let distanceSaved = (Math.abs(x) / 2) > y
+      ? y
+      : (Math.abs(x) / 2)
+
+    let distance = xydistance - distanceSaved
 
     if(distance > maxDistance) maxDistance = distance
   }
-
-  console.log(x, y)
 
   return maxDistance
 
