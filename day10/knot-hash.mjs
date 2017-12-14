@@ -6,13 +6,11 @@ import promisify from '../utils/promisify'
 
 const readFile = promisify(fs.readFile)
 
-export default async function solution(fileName) {
+export default async function solution(input) {
   const stream = await compose(
     R.concat(R.__, [17, 31, 73, 47, 23]),
-    R.map((c) => c.charCodeAt(0)),
-    R.toString,
-    readFile
-  )(fileName)
+    R.map((c) => c.charCodeAt(0))
+  )(input)
 
   const myArray = []
   for (let i = 0; i < 256; i++) {
@@ -71,10 +69,3 @@ export default async function solution(fileName) {
 
   return answer
 }
-
-
-(async () => {
-  const answer = await solution('./input.txt')
-
-  console.log(answer)
-})()
