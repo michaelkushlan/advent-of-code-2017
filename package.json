@@ -1,0 +1,11 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:michaelkushlan/advent-of-code-2017.git",
+  "author": "Michael Kushlan <michael-kushlan@pluralsight.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "0.25.0"
+  }
+}
