@@ -1,7 +1,5 @@
 import fs from 'fs'
-import merge from 'deepmerge'
 import R from 'ramda'
-import rotate from 'matrix-rotate'
 
 import compose from '../utils/compose'
 import promisify from '../utils/promisify'
@@ -26,7 +24,6 @@ export default async function solution(fileName) {
     }
   }
 
-  function rotate(key) {
     const myArray = key.split('/')
     if(myArray.length === 2) {
       return [
